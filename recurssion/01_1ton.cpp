@@ -1,17 +1,14 @@
 #include<iostream>
 using namespace std;
 
-void func(int i,int n){
-
-  if(i>n) return;
-  
-  cout << i <<endl;
-  
-  i++;
-  func(i,n);
+int print(int n){
+  if (n<1) return 0 ;
+  cout << "Yajanth Maharaj" << endl;
+  return print(n-1);
 }
- int main(){
-   int n;
-   cin >> n;
-   func(1,n);
- }
+int main(){
+  int n;
+  cin >> n;
+  print(n);
+  return 0;
+}
