@@ -1,17 +1,15 @@
 #include<iostream>
 using namespace std;
 
-void func(int i ,int n){
-  
-  if(i<1) return;
-  cout <<" >> " << i << endl;
-  i--;
-  func(i,n);
-}
+int revpr( int n){
 
+  if(n<1) return 0;
+  cout << n <<" , ";
+  return revpr(n-1);
+}
 int main(){
   int n;
   cin >> n;
-  func(n,n);
-
+  revpr(n);
+  return 0;
 }
